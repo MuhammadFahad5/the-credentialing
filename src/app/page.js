@@ -9,6 +9,7 @@ import CredentialServices from "./component/home/CredentialServices";
 import PatnerSlide from './component/home/PatnerSlide'
 import  CredentialDoDont  from "./component/home/CredentialDoDont";
 import CredentialNegotiation from "./component/home/CredentialNegotiation";
+import IPAEnrollment from "./component/home/IPAEnrollment";
 export default function Home() {
   return (
     <>
@@ -23,6 +24,7 @@ export default function Home() {
     <PatnerSlide/>
     <CredentialServices no='2'/>
     <CredentialNegotiation/>
+    <IPAEnrollment/>
     
     </>
   );
