@@ -1,16 +1,24 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import do_dont_home from '../../../../public/home/do-dont-home.png'
 import { IoIosCheckmark } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
-import { Col, Row } from "antd";
+import useMediaQuery from '@/app/globalComponents/useMediaQuery'
+import { motion } from "framer-motion";
 
 const CredentialDoDont = () => {
+    const isDesktop = useMediaQuery('(min-width: 1280px)');
     return (
         <section className='back-do-dont py-16'>
             <div className="my-container lg:max-w-[1440px]">
                 <div className="my-row">
-                    <div className='w-full md:w-[60%] bg-white p-7 rounded-md order-2 md:order-1'>
+                    <motion.div
+                        initial={isDesktop?{ opacity: 0, x: -40 }:{}}
+                        whileInView={isDesktop?{ opacity: 1, x: 0 }:{}}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className='w-full md:w-[60%] bg-white p-7 rounded-md order-2 md:order-1'>
                         <div className="">
                             <h2 className="font-bold text-[28px] md:text-[36px] text-[#212529] lg:mr-16 mb-5">
                                 DOs & DONT
@@ -51,8 +59,13 @@ const CredentialDoDont = () => {
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div className='w-full md:w-[40%] order-1 md:order-2 mb-10 md:mb-0'>
+                    </motion.div>
+                    <motion.div
+                        initial={isDesktop?{ opacity: 0, x: -40 }:{}}
+                        whileInView={isDesktop?{ opacity: 1, x: 0 }:{}}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className='w-full md:w-[40%] order-1 md:order-2 mb-10 md:mb-0'>
                         <Image
                             src={do_dont_home}
                             alt="DO & Dont"
@@ -60,7 +73,7 @@ const CredentialDoDont = () => {
                             height={430}
                             className='w-full md:w-[85%] mx-auto md:ml-auto'
                         />
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>

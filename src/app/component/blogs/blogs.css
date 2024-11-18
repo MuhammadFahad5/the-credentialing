@@ -1,0 +1,12 @@
+.blogs-banner-bg{
+    background-color: #203993;
+    background-image: url(/blogs/blogs-bg-banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* .blogs-tab-list::marker{
+    color: grey;
+    font-size: 14px;
+} */

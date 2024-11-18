@@ -1,13 +1,23 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import credentialing_need_home from '../../../../public/home/credentialing_need_home.png'
 import { FaCaretRight } from "react-icons/fa";
+import useMediaQuery from '@/app/globalComponents/useMediaQuery'
+import { motion } from "framer-motion";
+
 
 
 const CredentialNeed = () => {
+    const isDesktop = useMediaQuery('(min-width: 1280px)');
     return (
         <section className='bg-[#f4f4f4] py-16'>
-            <div className="my-container">
+            <motion.div
+                initial={isDesktop?{ opacity: 0, x: 40 }:{}}
+                whileInView={isDesktop?{ opacity: 1, x: 0 }:{}}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="my-container">
                 <div className="my-row">
                     <div className='w-full md:w-[30%] p-3'>
                         <Image
@@ -31,12 +41,12 @@ const CredentialNeed = () => {
                                 <li className='home-list'> <FaCaretRight size={17} className="text-primary mr-4" />Exploring New Affiliations</li>
                                 <li className='home-list'> <FaCaretRight size={17} className="text-primary mr-4" /> Enrollment with New Payers</li>
                                 <li className='home-list'> <FaCaretRight size={17} className="text-primary mr-4" /> Ongoing Credentialing Management</li>
-                                
+
                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }

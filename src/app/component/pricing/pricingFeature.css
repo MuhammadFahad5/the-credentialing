@@ -1,0 +1,15 @@
+.pricing-feature-col {
+    transition: all 0.4s;
+}
+
+.pricing-feature-col:hover {
+    transform: translateY(-12px);
+}
+
+.pricing-feature-box {
+    box-shadow: 0px 6px 15px 0px rgb(32 57 147 / 37%);
+}
+
+.pricing-form-section .ant-select .ant-select-selector{
+padding: 5px;
+}

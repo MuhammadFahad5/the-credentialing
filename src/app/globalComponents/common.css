@@ -1,0 +1,27 @@
+
+
+:where(.css-dev-only-do-not-override-1c0na6j).ant-float-btn-circle .ant-float-btn-body {
+    border-radius: 0;
+    transition: all 2s;
+    background: #203993;
+    border-radius: 50%;
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    /* padding-bottom:10px ; */
+    /* border: 2px solid #203993; */
+    /* padding: 12px; */
+    /* text-align: center;
+    text-decoration: none;
+    min-width: 50px;
+    font-size: .8em; */
+    transform: scale(1.1);
+}
+
+:where(.css-dev-only-do-not-override-1c0na6j).ant-float-btn-circle .ant-float-btn-body:hover {
+    background: #203993;
+}
+
+:where(.css-dev-only-do-not-override-1c0na6j).ant-float-btn-circle .ant-float-btn-body svg{
+   color: white;
+}
